@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 | Halaman Tidak Ditemukan</title>
+<style>
+  :root {
+    --bg-color: #050710;
+    --card-color: #0d1020;
+    --border-glow: rgba(0, 162, 255, 0.25);
+    --accent: #0078ff;
+    --accent2: #00e0ff;
+    --text-main: #e6f1ff;
+    --text-muted: #8ca0b3;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Inter", sans-serif;
+  }
+
+  body {
+    background: radial-gradient(circle at top, #0a0d18 0%, #050710 100%);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .card {
+    background: var(--card-color);
+    border: 1px solid var(--border-glow);
+    box-shadow: 0 0 30px rgba(0, 162, 255, 0.15),
+                inset 0 0 20px rgba(0, 100, 200, 0.05);
+    border-radius: 20px;
+    padding: 60px 45px;
+    text-align: center;
+    max-width: 460px;
+    width: 90%;
+    position: relative;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(0, 162, 255, 0.2), rgba(0, 255, 255, 0.05));
+    z-index: -1;
+    filter: blur(8px);
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    color: #cfd8e3;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    padding: 12px 26px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 15px rgba(0, 162, 255, 0.3);
+  }
+
+  a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 162, 255, 0.5);
+  }
+
+  footer {
+    margin-top: 35px;
+    font-size: 0.8rem;
+    color: #617286;
+    letter-spacing: 0.5px;
+  }
+
+  /* Subtle glow ring animation behind card */
+  .glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 162, 255, 0.12), transparent 70%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    filter: blur(60px);
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="card">
+    <h1>404</h1>
+    <h2>Halaman Tidak Ditemukan</h2>
+    <p>File atau halaman yang Anda cari belum tersedia.<br>
+    Mungkin sedang dalam proses upload atau konfigurasi server.</p>
+    <a href="/">Kembali ke Beranda</a>
+    <footer>© 2025 GalaxyHost - Handal • Stabil • Aman</footer>
+  </div>
+</body>
+</html>
