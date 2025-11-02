@@ -1,4 +1,97 @@
-{
-  "Status": "Your Storage Is Active",
-  "Creator": "PabloCloud"
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDN SERVER</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 4rem;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .status {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ffea;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; }
+    50% { text-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea; }
+  }
+
+  .creator {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .upload-btn {
+    display: inline-block;
+    background-color: #00ffea;
+    color: #0f0c29;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,255,234,0.4);
+  }
+
+  .upload-btn:hover {
+    background-color: #00d4c4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,255,234,0.6);
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 2rem 1.5rem; }
+    .status { font-size: 1.5rem; }
+    .creator { font-size: 1rem; }
+    .upload-btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="status">Your Storage Is Active</div>
+  <div class="creator">Creator: PabloCloud</div>
+  <a href="https://boxup.galaxyhost.biz.id" class="upload-btn">Go to Dashboard</a>
+
+</body>
+</html>
